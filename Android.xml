@@ -521,5 +521,60 @@
       <option name="COMPLETION" value="true" />
     </context>
   </template>
+   <template name="ns-tools" value="xmlns:tools=&quot;http://schemas.android.com/tools&quot;" description="Add tools namespace" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="ns-android" value="xmlns:android=&quot;http://schemas.android.com/apk/res/android&quot;" description="Add android namespace" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="ns-app" value="xmlns:app=&quot;http://schemas.android.com/apk/res-auto&quot;" description="adds application namespace" toReformat="false" toShortenFQNames="true">
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="ttext" value="tools:text=&quot;$Text$&quot;" description="Add tools:text attribute" toReformat="false" toShortenFQNames="true">
+    <variable name="Text" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="XSL_TEXT" value="true" />
+      <option name="XML" value="true" />
+      <option name="XML_TEXT" value="true" />
+    </context>
+  </template>
+  <template name="f_ns" value="private static final String NAMESPACE = $CLASS_NAME$.class.getName();" description="Fragment Namespace Constant" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS_NAME" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_STATEMENT" value="false" />
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="f_arg" value="private static final String $ARG_NAME$ = NAMESPACE + &quot;.$ARG_NAME$&quot;;" description="Declare fragment argument" toReformat="false" toShortenFQNames="true">
+    <variable name="ARG_NAME" expression="" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="f_new" value="public static $CLASS_NAME$ newInstance(){&#10;    return new $CLASS_NAME$();&#10;}" description="Declare static initialize method(newInstance)" toReformat="false" toShortenFQNames="true">
+    <variable name="CLASS_NAME" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
+  <template name="f_new_args" value="public static $CLASS_NAME$ newInstance(){&#10;    Bundle args = new Bundle($ARGS_COUNT$);&#10;    &#10;    $CLASS_NAME$ f = new $CLASS_NAME$();&#10;    f.setArguments(args);&#10;    return f;&#10;}" description="Declare static initialize method(newInstance)" toReformat="false" toShortenFQNames="true" useStaticImport="true">
+    <variable name="CLASS_NAME" expression="className()" defaultValue="" alwaysStopAt="true" />
+    <variable name="ARGS_COUNT" expression="" defaultValue="1" alwaysStopAt="true" />
+    <context>
+      <option name="JAVA_DECLARATION" value="true" />
+    </context>
+  </template>
 </templateSet>
 
