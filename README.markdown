@@ -77,45 +77,85 @@ Once you found it, `cd` into it, run `git clone https://github.com/keyboardsurfe
 - **`lww`**: "android:layout_width=&quot;wrap_content&quot;"
 - **`toolsNs`**: "adds tools namespace to Android xml file"
 - **`ld - Send a DEBUG log message.
+* ld - Send a DEBUG log message.
+```
 Log.d("$TAG$", "$MSG$");
-le - Send a ERROR log message.
+```
+* le - Send a ERROR log message.
+```
 Log.e("$TAG$", "$MSG$");
-li - Send a INFO log message.
+```
+* li - Send a INFO log message.
+```
 Log.i("$TAG$", "$MSG$");
-lw - Send a WARN log message.
+```
+* lw - Send a WARN log message.
+```
 Log.w("$TAG$", "$MSG$");
-lv - Send a VERBOSE log message.
+```
+* lv - Send a VERBOSE log message.
+```
 Log.v("$TAG$", "$MSG$");
-wtf - What a Terrible Failure: Report an exception that should never happen.
+```
+* wtf - What a Terrible Failure: Report an exception that should never happen.
+```
 Log.wtf("$TAG$", "$MSG$");
-toast - show toast
+```
+
+* toast - show toast
+```
 Toast.makeText($context$, $msg$, Toast.LENGTH_SHORT).show();
-profile - measure exceution time
+```
+* profile - measure exceution time
+```
 final long start = System.currentTimeMillis();
 $END$
 Log.d("profiling", "[$methodName$]:" + (System.currentTimeMillis() - start));
-view (ButterKnife) - inject view
+```
+* view (**ButterKnife**) - inject view
+```
 @InjectView(R.id.$VIEW$)
 $TYPE$ $NAME$
-click (ButterKnife) - add OnClickListener
+```
+* click (**ButterKnife**) - add OnClickListener
+```
 @OnClick(R.id.$VIEW$)
 void on$NAME$Click() {
     $END$
 }
-android - Add android namespace (XML)
+```
+* android - Add android namespace (**XML**)
+```
 xmlns:android="http://schemas.android.com/apk/res/android"
-tools - Add tools namespace (XML)
+```
+* tools - Add tools namespace (**XML**)
+```
 xmlns:tools="http://schemas.android.com/tools"
-ttext - Add tools:text attribute
+```
+* ttext - Add tools:text attribute
+```
 tools:text="$text$"
-ps - Create private static final String field.
+```
+
+* ps - Create private static final String field.
+```
 private static final String $NAME$ = "$VALUE$";
-pi - Create private static final int field.
+```
+
+* pi - Create private static final int field.
+```
 private static final int $NAME$ = $VALUE$;
-pf - Create private static final float field.
+```
+
+* pf - Create private static final float field.
+```
 private static final float $NAME$ = $VALUE$;
-pd - Create private static final double field.
+```
+
+* pd - Create private static final double field.
+```
 private static final double $NAME$ = $VALUE$;
+```
 ##Contribution
 1. Fork
 2. Add your own live templates
